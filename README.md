@@ -19,7 +19,7 @@ Solved in 7 moves, which is optimal! Great job!
 
 ## Background
 
-I came up with this game while watching MIT's [6.1200 Mathematics for Computer Science](https://ocw.mit.edu/) lectures on OpenCourseWare. In those lectures the 8-puzzle is the standard example of an **invariant**: a property that no legal move can change. That property tells you, without searching at all, that half of all scrambles can never be solved.
+I came up with this game while watching MIT's [6.1200 Mathematics for Computer Science](https://ocw.mit.edu/) lectures on OpenCourseWare. The course introduced the 8-puzzle as the motivation for state machines and the invariant principle. I was first intrigued by the idea of quickly determining solvability by counting the number of inverted pairs on the board. Then I became interested in how to efficiently solve a solvable board.
 
 ## How it works
 
