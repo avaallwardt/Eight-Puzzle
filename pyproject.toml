@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eight-puzzle"
+version = "1.0.0"
+description = "Terminal 8-puzzle game with a parity-based solvability check, BFS state-space analysis, and an optimal A* solver."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ava Allwardt" }]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+eight-puzzle = "eight_puzzle.cli:main"
+
+[tool.ruff]
+line-length = 110
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
