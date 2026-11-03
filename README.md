@@ -123,4 +123,4 @@ CI runs both on Python 3.10, 3.12, and 3.13.
 
 - Generalize to the n×n sliding puzzle. The parity rule changes for even widths: the blank's row also counts.
 - IDA* for the 15-puzzle, where BFS's memory use stops being practical.
-- Pattern-database heuristics.
+- Pattern-database for heuristic function.
