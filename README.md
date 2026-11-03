@@ -20,7 +20,7 @@ Solved in 7 moves, which is optimal! Great job!
 I came up with this game while watching MIT's [6.1200 Mathematics for Computer Science](https://ocw.mit.edu/) lectures on OpenCourseWare. The course introduced the 8-puzzle as the motivation for state machines and the invariant principle. I was first intrigued by the idea of quickly determining solvability by counting the number of inverted pairs on the board. Then I became interested in how to efficiently solve a solvable board.
 
 ## How it works
-### A summary of BFS and A*
+### 0. A summary of BFS and A*
 In BFS, you enqueue the neighbors of the current grid, which are all the grids produced by moving the blank space one square in any legal direction. You frame each grid as a node in a graph, with each move of the blank taking you to a neighboring node. Then you proceed with standard breadth-first search, exploring grids one level at a time and enqueueing their unvisited neighbors until the queue is empty or you find the goal grid.
 
 The downside of using a standard BFS queue is that you explore all grids one move away, then all grids two moves away, and so on, even if some of those moves make the grid more scrambled. It’s hard to quantify exactly how scrambled a grid is, though, because finding the minimum number of moves needed to solve it entails basically solving the puzzle / is itself a shortest-path problem.
