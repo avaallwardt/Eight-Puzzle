@@ -1,8 +1,6 @@
 # 8-Puzzle
 
-[![CI](https://github.com/YOUR-USERNAME/eight-puzzle/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/eight-puzzle/actions/workflows/ci.yml)
-
-A terminal game built on one question: **can this scrambled 8-puzzle be solved?** First you decide. If it can, you solve it yourself, and an optimal solver can give you hints or the shortest solution.
+This terminal game asks the user if a given scrambled 8-puzzle is solvable. If so, the user solves it. Optimal solvers implemented using BFS and A* can give hints or reveal the shortest solution.
 
 ```
 2 _ 3
