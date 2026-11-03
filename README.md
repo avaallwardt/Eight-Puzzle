@@ -25,7 +25,7 @@ I came up with this game while watching MIT's [6.1200 Mathematics for Computer S
 ### A summary of BFS and A*
 In BFS, you enqueue the neighbors of the current grid, which are all the grids produced by moving the blank space one square in any legal direction. You frame each grid as a node in a graph, with each move of the blank taking you to a neighboring node. Then you proceed with standard breadth-first search, exploring grids one level at a time and enqueueing their unvisited neighbors until the queue is empty or you find the goal grid.
 
-The downside of using a standard BFS queue is that you explore all grids one move away, then all grids two moves away, and so on, even if some of those moves make the grid more scrambled. It’s hard to quantify exactly how scrambled a grid is, though, because finding the minimum number of moves needed to solve it is basically solving the puzzle.
+The downside of using a standard BFS queue is that you explore all grids one move away, then all grids two moves away, and so on, even if some of those moves make the grid more scrambled. It’s hard to quantify exactly how scrambled a grid is, though, because finding the minimum number of moves needed to solve it entails basically solving the puzzle / is itself a shortest-path problem.
 
 A* search addresses this limitation by using a priority queue. The priority of a grid (a node in the graph) is `f(n) = g(n) + h(n)`, where `g(n)` is the number of moves taken to get from the starting grid to the current grid and `h(n)` is the estimated number of moves left to reach the goal. To compute `h(n)`, we sum the Manhattan distances from each numbered tile’s current position to its goal position, skipping the blank.
 
